@@ -20,6 +20,7 @@ builds/
 *.sdf
 *.user
 *.deps
+*.ipch
 
 # OSX specific
 .DS_Store
