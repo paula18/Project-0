@@ -30,5 +30,5 @@ builds/
 *.swp
 
 # Exceptions
-!external/*
 !external/lib/*/*.lib
+!external/bin/*
