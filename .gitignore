@@ -18,6 +18,7 @@ builds/
 *.suo
 *.pdb
 *.sdf
+*.opensdf
 *.user
 *.deps
 *.ipch
