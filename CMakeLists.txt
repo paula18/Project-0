@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-#on OSX we have to explicitly set clang/clang++ since for some strange reason CUDA6 thinks cc/c++
-#aliases to gcc, even though they alias to clang
+#on OSX we have to explicitly set clang/clang++
 set (CMAKE_C_COMPILER clang)
 set (CMAKE_CXX_COMPILER clang++)
 
-project(CIS565HW0)
+project(CIS565_PROJ_0)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
@@ -63,12 +62,12 @@ set(CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE ON)
 
 set(CUDA_SEPARABLE_COMPILATION ON)
 
-#Make NVCC shut up on Linux/OSX or else we'll get like a billion log messages dumped to the console
+#Make NVCC run silently
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}-w;")
 endif()
 
-#Force Visual Studio to link against MT versions of libs, otherwise things get not fun real fast
+#Force Visual Studio to link against MT versions of libs
 if(MSVC)
 	set(CompilerFlags
 	        CMAKE_CXX_FLAGS
@@ -91,6 +90,6 @@ set(SOURCE_FILES "src/main.cpp")
 set(SOURCE_FILES ${SOURCE_FILES} "src/kernel.cu")
 set(SOURCE_FILES ${SOURCE_FILES} "${EXTERNAL}/src/glslUtil/glslUtility.cpp")
 
-cuda_add_executable(CIS565HW0 ${SOURCE_FILES} OPTIONS -arch=sm_20)
+cuda_add_executable(CIS565_PROJ_0 ${SOURCE_FILES} OPTIONS -arch=sm_20)
 
-target_link_libraries(CIS565HW0 ${CORELIBS})
+target_link_libraries(CIS565_PROJ_0 ${CORELIBS})
