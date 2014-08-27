@@ -18,6 +18,8 @@ builds/
 *.suo
 *.pdb
 *.sdf
+*.user
+*.deps
 
 # OSX specific
 .DS_Store
@@ -28,3 +30,4 @@ builds/
 
 # Exceptions
 !external/*
+!external/lib/*/*.lib
