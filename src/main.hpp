@@ -70,10 +70,10 @@ GLuint InitShader();
 //====================================
 // Cleanup Stuff
 //====================================
-void Cleanup();
 #if _WIN32
-void CleanupCuda();
+void Cleanup();
 #endif
+void CleanupCuda();
 void DeletePBO(GLuint* pbo);
 void DeleteTexture(GLuint* tex);
 
