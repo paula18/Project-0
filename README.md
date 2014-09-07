@@ -1,5 +1,5 @@
-Project0
-========
+Project 0
+=========
 
 Project 0 : Get CUDA set up and running
 
@@ -70,7 +70,7 @@ classmates. The window title should be a combination of your name and the model
 of your graphics card.
 
 Please note: The Windows version of Project 0 uses GLEW/freeglut, whereas the
-OSX version of Homework 0 uses GLFW. The two versions of CUDATEST are
+OSX version of Project 0 uses GLFW. The two versions of CUDATEST are
 functionally the same and share the same CUDA code, but the GL harnesses for
 each are slightly different.
 
@@ -122,4 +122,4 @@ the current directory.
 * 3. Open a Pull Request so we can see that you have finished.
 * 4. Send an email to Harmony with your name, github account name, and the
     grade you believe you deserve.
-* 5. You're done with Homework 0!
+* 5. You're done with Project 0!
